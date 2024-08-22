@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck11yxbakptkg"]
+
+[ext_resource type="Texture2D" uid="uid://dy2h5dklc8h7p" path="res://Invaders/Invader1-1.png" id="1_uetuf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gg0j"]
+radius = 6.0
+
+[node name="Invader" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_uetuf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6gg0j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
