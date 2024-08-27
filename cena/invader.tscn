@@ -13,6 +13,22 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_6gg0j"]
 radius = 6.08276
 
+[sub_resource type="Animation" id="Animation_lwj42"]
+resource_name = "destroy"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_6c2ov"), ExtResource("9_toa4h")]
+}
+
 [sub_resource type="Animation" id="Animation_nlak7"]
 resource_name = "move_1"
 loop_mode = 1
@@ -61,21 +77,6 @@ tracks/0/keys = {
 "values": [ExtResource("7_xys0c"), ExtResource("2_chr0g")]
 }
 
-[sub_resource type="Animation" id="Animation_lwj42"]
-resource_name = "destroy"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("8_6c2ov"), ExtResource("9_toa4h")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gi60j"]
 _data = {
 "destroy": SubResource("Animation_lwj42"),
@@ -92,7 +93,7 @@ script = ExtResource("1_0nl58")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_chr0g")
+texture = ExtResource("9_toa4h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6gg0j")

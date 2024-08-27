@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://f0sv2wrj1mv6"]
+
+[node name="Invader_Spawner" type="Node2D"]
+position = Vector2(0, -190)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
